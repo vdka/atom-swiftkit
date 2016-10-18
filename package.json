@@ -25,6 +25,14 @@
       "type": "string",
       "default": "/usr/local/bin/sourcekitten",
       "description": "Path to a SourceKitten executable on your local system."
+    },
+    "completionMatchThreshhold": {
+      "title": "The threshhold to use for matching completions",
+      "type": "number",
+      "default": "0.5",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "This is passed to Fuse to filter the results to only those relivant"
     }
   }
 }
