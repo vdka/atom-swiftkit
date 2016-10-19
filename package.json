@@ -10,16 +10,37 @@
   },
   "dependencies": {
     "js-yaml": "3.6.1",
-    "fuse.js": "2.5.0"
+    "fuse.js": "2.5.0",
+    "atom-linter": "^8.0.0"
   },
+  "package-deps": [
+    "linter"
+  ],
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
         "2.0.0": "createAutocompleteProvider"
       }
+    },
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
     }
   },
   "configSchema": {
+    "toolchainPath": {
+      "title": "Path to the Swift Toolchain Executable",
+      "type": "string",
+      "default": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain",
+      "description": "Path to the toolchain to use for call's to the Swift binary."
+    },
+    "swiftPMFlags": {
+      "title": "Additional flags to pass to the swift build command for the linter.",
+      "type": "string",
+      "default": "",
+      "description": "Passed to swift build when the linter is run."
+    },
     "sourceKittenPath": {
       "title": "Path to SourceKitten Executable",
       "type": "string",
