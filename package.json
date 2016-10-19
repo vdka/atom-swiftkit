@@ -1,7 +1,7 @@
 {
   "name": "swiftkit",
   "main": "./lib/main.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Code Completion for Swift",
   "repository": "https://github.com/vdka/atom-swiftkit",
   "license": "MIT",
